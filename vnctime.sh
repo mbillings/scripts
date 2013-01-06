@@ -11,8 +11,6 @@
 #     PACKAGES: tigervnc (fc17.x86_64)
 #         BUGS: ---
 #        NOTES: ---
-#       AUTHOR: Matthew Billings
-# ORGANIZATION: 
 #      CREATED: 02/04/2012 01:50:22 PM CDT
 #     REVISION: 0.2
 #===============================================================================
