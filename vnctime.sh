@@ -20,6 +20,7 @@ local_port="5901"
 server_port="5909"
 server="example.domain.com"
 sleep_delay="5"
+user="my_username_here"
 
 # Case to kill previous or stale session
 case "$1" in
@@ -41,7 +42,7 @@ ssh-add -l
 # start SSH port-forwarding
 if [ `/bin/ps aux | grep $local_port\:localhost\:$server_port | grep -v grep | wc -l` -eq 0 ]
 then 
-	/usr/bin/ssh -t -t -l hinc -L $local_port:localhost:$server_port $server &
+	/usr/bin/ssh -t -t -l $user -L $local_port:localhost:$server_port $server &
 	sleep $slumber
 fi
 /usr/bin/vncviewer localhost:1 &
